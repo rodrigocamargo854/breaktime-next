@@ -10,6 +10,12 @@ import { Countdown } from "../Componentes/Countdown";
 export default function Home() {
   return (
     <div className={styles.container}>
+      <Head>
+      <title>Inicio | Breaktime
+
+        
+      </title>
+      </Head>
       <ExperienceBar />
       <section>
         <div className = "">

@@ -5,27 +5,24 @@
   }
   
   :root {
+    --white: #FFF;
+    --background: #F2F3F5;
+    --gray-line: #DCDDE0;
+    --text: #666;
+    --text-highlight: #B3B9FF;
     --red: #E83F5B;
     --green: #4CD62B;
     --blue: #5965E0;
     --blue-dark: #4953B8;
     --blue-twitter: #2AA9E0;
-    background-color: var(--background);
+    --title: #2E384D;
+    --default-text: #FFF;
+    --overlay: #f2f3f5cc;
   }
   
-  .LIGHT {
-    --white: #FFF;
-    --background: #F2F3F5;
-    --gray-line: #DCDDE0;
-    --text: #666;
-    --default-text: #FFF;
-    --title: #2E384D;
-    --overlay: #f2f3f5cc;
-    background-color: var(--background);
-  }
   
   .DARK {
-    --white: #202024;
+    --white: #ececf8;
     --background: #121214;
     --gray-line: #323238;
     --text: #ddd !important;
