@@ -75,9 +75,9 @@
     color: var(--title);
   }
 
-  .countdownButtonActive{
-    background: var(--white);
-    color: var(--title);
+  .countdownButtonActive:hover{
+    background: var(--red);
+    color: var(--white);
   }
 
   .countdownButtonActive:not(:disabled):hover{
