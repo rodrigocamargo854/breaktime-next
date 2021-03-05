@@ -20,18 +20,7 @@
     --overlay: #f2f3f5cc;
   }
   
-  
-  .DARK {
-    --white: #ececf8;
-    --background: #121214;
-    --gray-line: #323238;
-    --text: #ddd !important;
-    --default-text: #ccc;
-    --title: #ccc;
-    --overlay: #0d0c0bcc;
-    background-color: var(--background);
-  }
-  
+
   @media(max-width: 1080px) {
     html {
       font-size: 93.75%;
