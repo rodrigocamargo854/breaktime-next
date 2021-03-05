@@ -1,56 +1,47 @@
-import { useContext, useState } from 'react';
-import { ChallengesContext } from '../context/ChallengesContext';
+import { useContext } from 'react';
+import { ChallengeContext } from '../context/ChallengesContext';
+
 import styles from '../styles/components/ChallengeBox.module.css'
 
 export function ChallengeBox() {
-    const contextData = useContext(ChallengesContext);
-    
-    
-    
-    const hasActiveChallenge = true;
+    const {activeChallenge } = useContext(ChallengeContext);
+
     return (
         <div className={styles.challengeBoxContainer}>
-            {hasActiveChallenge ? 
-            (
-                <div className={styles.challengeActive}>
-                    <header> Ganhe 400 xp</header>
+            {activeChallenge ?
+                (<div className={styles.challengeActive}>
+                    <header> Ganhe {activeChallenge.amount}</header>
+                   
                     <main>
-                        <img src="icons/body.svg" alt="" />
+                        <img src={`icons/${activeChallenge.type}.svg`}  />
                         <strong>Novo Desafio</strong>
-                        <p>Levante e Faça uma caminhada de 3 minutos</p>
+                        <p>{activeChallenge.description}</p>
                     </main>
-
                     <footer>
                         <button
                             type='button'
-                            className={styles.challengeFailedButton}
-                        >
+                            className={styles.challengeFailedButton}>
                             Falhei
                         </button>
 
                         <button
                             type='button'
-                            className={styles.challengeSucceededButton}
-
-                        >
+                            className={styles.challengeSucceededButton}>
                             Completei
                         </button>
-
                     </footer>
-                    </div>
-            ) : (
-                    <div className={styles.challengedNotActive}>
-                        <strong>Inicie um ciclo
-                        para receber desafios a
-                        serem completados
-                 </strong>
-                        <p>
-                            <img src="icons/level-up.svg" alt="Level-up" />
+                </div>
+                ) : (
+                <div className={styles.challengedNotActive}>
+                    <strong>Inicie um ciclo
+                    para receber desafios a
+                    serem completado
+                    </strong>
+                    <p>
+                    <img src="icons/level-up.svg" alt="Level-up" />
                      Avance de level completando desafios
                  </p>
-                    </div>
-            )
-            }
                 </div>
-            )
-}
+                )}
+        </div>
+    )}

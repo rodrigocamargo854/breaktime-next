@@ -10,7 +10,7 @@ let countdownTimeout: NodeJS.Timeout;
 export function Countdown() {
     const{startNewChallenge} =  useContext(ChallengeContext);
 
-    const [time, setTime] = useState(25 * 60);
+    const [time, setTime] = useState(0.1 * 60);
     const [isActive, setisActive] = useState(false);
     const [hasFinished, setHasFinished] = useState(false);
 
@@ -28,21 +28,20 @@ export function Countdown() {
     function resetCountDown() {
         clearTimeout(countdownTimeout);
         setisActive(false);
-        setTime(25 * 60);
+        setTime(0.1 * 60);
     }
 
     useEffect(() => {
         if (isActive && time > 0) {
-            countdownTimeout = setTimeout(() => {
-                setTime(time - 1);
-            }, 1000)
+          countdownTimeout = setTimeout(() => {
+            setTime(time - 1)
+          }, 1000)
         } else if (isActive && time === 0) {
-            setHasFinished(true);
-            setisActive(false);
-            startNewChallenge;
+          setHasFinished(true)
+          setisActive(false)
+          startNewChallenge()
         }
-    }, [isActive, time])
-
+      }, [isActive, time])
 
     return (
         <div>
@@ -65,6 +64,7 @@ export function Countdown() {
                 >
                     Ciclo Encerrado
                 </button>
+
 
             ) : (
                     <>
