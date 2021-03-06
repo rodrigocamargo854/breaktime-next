@@ -46,7 +46,7 @@
     cursor: pointer;
   }
   
-  a {
+  a,p {
     text-decoration: none;
-    color: inherit;
+    color: var(--title);
   }
