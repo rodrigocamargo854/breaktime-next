@@ -1,5 +1,7 @@
 import { createContext, ReactNode, useEffect, useState } from 'react';
 import challenges from '../../challenges.json';
+import Cookies from'js-cookie';
+
 
 
 interface Challenge{
@@ -76,6 +78,14 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
   }
 
 
+  useEffect(() => {
+    Cookies.set(`level`,level.toString());
+    Cookies.set(`currentExperience`, String(currentExperience));
+    Cookies.set(`challengeCompleted`, String(challengesCompleted));
+  }, [level, currentExperience,challengesCompleted]);
+
+
+  
   function resetChallenge(){
     setActiveChallenge(null)
   }

@@ -7,9 +7,9 @@ import { CompletedChallenges } from "../Componentes/CompletedChallenges";
 import { Countdown } from "../Componentes/Countdown";
 import { ChallengeBox } from "../Componentes/ChallengeBox";
 import { CountdownProvider } from "../context/CountdownContext";
+import {GetServerSideProps} from 'next'
 
-
-export default function Home() {
+export default function Home(props) {
   return (
     <div className={styles.container}>
       <Head>
@@ -19,7 +19,6 @@ export default function Home() {
       </title>
       </Head>
       <ExperienceBar />
-
       <CountdownProvider>
       <section>
         <div className = "">
@@ -35,4 +34,18 @@ export default function Home() {
       </div>
       
   )
+}
+
+export const getServerSideProps: GetServerSideProps = async(ctx) =>{
+  const {level,currentExperience,challengeCompleted} = ctx.req.cookies;
+
+  
+  return {
+
+    props: {
+      level,
+      currentExperience,
+      challengeCompleted
+    }
+  }
 }
