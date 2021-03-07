@@ -1,6 +1,4 @@
-<p align="center">
-   <img src="./.github/logo.svg" alt="breaktimechallenge" width="300"/>
-</p>
+
 
 <p align="center">	
    <a href="https://www.linkedin.com/in/rodrigo-camargo-a569b5179/">
