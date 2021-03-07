@@ -1,4 +1,3 @@
-
 <p align="center">
    <img src="./.github/logo.svg" alt="breaktimechallenge" width="300"/>
 </p>
@@ -25,70 +24,58 @@
 > :rocket: Move It is a project to help people to make more exercises. Next Level Week #04 #NLW @Rocketseat
 
 
+<h1 align="center">
+  <img alt="move.it" title="move.it" src=".github/logo.png" />
+</h1>
 
-<div align="center">
-  <sub>The NLW #4 project. Built with ❤︎ by
-    <a href="https://github.com/rodrigocamargo854">Rodrigo Camargo</a> and
-    <a href="https://github.com/rodrigocamargo854/breaktime-next/graphs/contributors">
-      contributors
-    </a>
-  </sub>
-</div>
-
-# :pushpin: Table of Contents
-
-* [Demo Website](#eyes-demo-website)     
-* [Technologies](#computer-technologies)
-* [Features](#rocket-features)
-* [How to Run](#construction_worker-how-to-run)
-
-
-<h2 align="left"> 📥 Layout available for download at: </h2>
 <p align="center">
-    <a title=" " href="https://www.figma.com/file/ge20pu3ofMOKoliUyKx1Nl/?viewer=1&node-id=160:2761">
-        <img alt="Direct Download" src="https://www.figma.com/file/ge20pu3ofMOKoliUyKx1Nl/?viewer=1&node-id=160:2761" width="200px" />
-    </a>
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-como-executar">Como executar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-licença">Licença</a>
 </p>
 
-<div>
-   <img src="./.github/screenshot-1.png" width="400px">
-   
-</div>
+<p align="center">
+  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=8257E5&labelColor=000000">
 
-# :eyes: Demo Website
-👉  demo: https://breaktimechallenges.vercel.app/
+ <img src="https://img.shields.io/static/v1?label=NLW&message=04&color=8257E5&labelColor=000000" alt="NLW 04" />
+</p>
 
-# :computer: Technologies
-This project was made using the follow technologies:
+<br>
 
-* [Typescript](https://www.typescriptlang.org/)      
-* [React](https://reactjs.org/)      
-* [Next.js](https://nextjs.org/)      
-     
+<p align="center">
+  <img alt="Happy" src=".github/moveit.png" width="100%">
+</p>
 
-# :rocket: Features
+## ✨ Tecnologias
 
-* Pomodoro timer.
-* Help to get up of chair and make some exercise.
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-# :construction_worker: How to run
-```bash
-# Clone Repository
-$ git clone https://github.com/rodrigocamargo854/breaktime-next
-```
+- [React](https://reactjs.org)
+- [Next.js](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
 
-### 💻 Run Web Project
+## 💻 Projeto
 
-```bash
-# Install Dependencies
-$ yarn install
+O move.it é um app que une a técnica de Pomodoro com a realização de exercícios físicos para quem passa muito tempo na frente do computador.
 
-# Run Aplication
-$ yarn dev
-```
-Go to http://localhost:3000/ to see the result.
+## 🔖 Layout
 
+Você pode visualizar o layout do projeto através [desse link](https://www.figma.com/file/ge20pu3ofMOKoliUyKx1Nl/Move.it-1.0). É necessário ter conta no [Figma](http://figma.com/) para acessá-lo.
 
+## 🚀 Como executar
 
+- Clone o repositório
+- Instale as dependências com `yarn`
+- Inicie o servidor com `yarn dev`
 
-Give a ⭐️ if this project helped you!
+Agora você pode acessar [`localhost:3000`](http://localhost:3000) do seu navegador.
+
+## 📄 Licença
+
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+
+---
+
+Feito com ♥ by Rocketseat 👋🏻 [Participe da nossa comunidade!](https://discordapp.com/invite/gCRAFhc)
