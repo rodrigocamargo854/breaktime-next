@@ -8,14 +8,27 @@ import { Countdown } from "../Componentes/Countdown";
 import { ChallengeBox } from "../Componentes/ChallengeBox";
 import { CountdownProvider } from "../context/CountdownContext";
 import {GetServerSideProps} from 'next'
+import {ChallengesProvider} from '../context/ChallengesContext'
 
-export default function Home(props) {
+interface HomeProps{
+  level:number;
+  currentExperience:number;
+  challengeCompleted:number;
+
+}
+
+export default function Home(props:HomeProps) {
   return (
+    <ChallengesProvider 
+    level={props.level} 
+    currentExperience={props.currentExperience}
+    challengeCompleted={props.challengeCompleted}
+    >
+    
+    
     <div className={styles.container}>
       <Head>
       <title>Inicio | Breaktime
-
-        
       </title>
       </Head>
       <ExperienceBar />
@@ -32,6 +45,7 @@ export default function Home(props) {
       </section>
       </CountdownProvider>
       </div>
+    </ChallengesProvider>
       
   )
 }
@@ -43,9 +57,9 @@ export const getServerSideProps: GetServerSideProps = async(ctx) =>{
   return {
 
     props: {
-      level,
-      currentExperience,
-      challengeCompleted
+      level:Number(level),
+      currentExperience:Number(currentExperience),
+      challengeCompleted:Number(challengeCompleted)
     }
   }
 }

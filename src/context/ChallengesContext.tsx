@@ -1,6 +1,7 @@
 import { createContext, ReactNode, useEffect, useState } from 'react';
 import challenges from '../../challenges.json';
 import Cookies from'js-cookie';
+import { LevelUpModal } from '../Componentes/LevelUpModal';
 
 
 
@@ -15,27 +16,38 @@ interface ChallengesContextData {
   currentExperience: number; 
   challengesCompleted: number; 
   activeChallenge: Challenge ;
+  experienceToNextLevel:number; 
+
   levelup:() => void;
   startNewChallenge:() => void;
   resetChallenge:() => void;
   completeChallenge:() => void;
-  experienceToNextLevel:number; 
+  closeSetLevelUpModal:() => void;
+  
 }
 
 interface ChallengesProviderProps {
   children: ReactNode;
+  level:number;
+  currentExperience:number;
+  challengeCompleted:number;
 }
 
 export const ChallengeContext = createContext({} as ChallengesContextData);
 
-export function ChallengesProvider({ children }: ChallengesProviderProps) {
+export function ChallengesProvider(
+{
+  children,
+  ...rest
+}: ChallengesProviderProps) {
   
-  const [level, setLevel] = useState(1);
+  const [level, setLevel] = useState(rest.level ?? 1);
   // aqui podemos setar o valor atual da barra de experiencia do usuario
-  const [currentExperience,setCurrentExperience] = useState(0);
-  const [challengesCompleted,setChallengesCompleted] = useState(0);
+  const [currentExperience,setCurrentExperience] = useState(rest.currentExperience ?? 0);
+  const [challengesCompleted,setChallengesCompleted] = useState(rest.challengeCompleted ?? 0);
   
   const[activeChallenge,setActiveChallenge] = useState(null);
+  const[isLevelUpModal,setisLevelUpModal] = useState(false);
   
   const experienceToNextLevel = Math.pow((level + 1) * 4,2)
 
@@ -92,8 +104,17 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
 
 
   function levelup() {
-    setLevel(level + 1)
+    setLevel(level + 1);
+    setisLevelUpModal(true);
+
   }
+  
+  function closeSetLevelUpModal() {
+    setisLevelUpModal(false);
+    
+
+  }
+
   return (
 
     <ChallengeContext.Provider 
@@ -107,7 +128,11 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
     resetChallenge,
     experienceToNextLevel,
     completeChallenge,
+    closeSetLevelUpModal
+    
   }}>
+    {/* && modo de fazer um if sem else */}
+    { isLevelUpModal && <LevelUpModal/> }
       {children}
     </ChallengeContext.Provider>
 
