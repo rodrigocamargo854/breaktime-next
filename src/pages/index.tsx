@@ -36,7 +36,9 @@ export default function Home(props:HomeProps) {
       <section>
         <div className = "">
         <Profile/>
+        <br/>
         <CompletedChallenges/>
+        <span>Pomodoro timer</span>
         <Countdown/>
         </div>
         <div>
