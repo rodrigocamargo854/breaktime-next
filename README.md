@@ -50,10 +50,7 @@
     </a>
 </p>
 
-<div>
-   <img src="./print.png" width="400px">
-   
-</div>
+
 
 # :eyes: Demo Website
 👉  demo: https://breaktimechallenges.vercel.app/
