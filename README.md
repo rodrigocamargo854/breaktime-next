@@ -4,7 +4,7 @@
 </p>
 
 <p align="center">	
-   <a href="https://www.linkedin.com/in/rafael-goulartb/">
+   <a href="https://www.linkedin.com/in/rodrigo-camargo-a569b5179/">
       <img alt="Rodrigo Camargo" src="https://img.shields.io/badge/-rodrigocamargo854-5965e0?style=flat&logo=Linkedin&logoColor=white" />
    </a>
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/rodrigocamargo854/breaktime-next?color=5863d2">
